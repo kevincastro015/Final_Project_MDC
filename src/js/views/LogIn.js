@@ -67,9 +67,6 @@ export const LogIn = () => {
 								}}>
 								Login
 							</button>
-							<button type="submit" className="btn btn-secondary">
-								Register
-							</button>
 						</form>
 					</div>
 				</div>
