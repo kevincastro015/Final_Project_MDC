@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../styles/home.scss";
 import { register } from "../utilities/register";
 import { useHistory } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Registration = () => {
+	const { actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [confirmation, setConfirmation] = useState("");
 	let history = useHistory();
-
+	let confPassword;
+	if (password === confirmation) {
+		confPassword = true;
+	} else {
+		confPassword = false;
+	}
 	const onsignInClicked = async (email, password) => {
 		try {
 			await register(email, password).then(userCredential => {
@@ -55,9 +63,20 @@ export const Registration = () => {
 									onChange={e => setPassword(e.target.value)}
 								/>
 							</div>
+							<div className="form-group">
+								<label>Confirm your Password</label>
+								<input
+									type="password"
+									className="form-control"
+									placeholder="Password"
+									onChange={e => setConfirmation(e.target.value)}
+									style={!confPassword ? { borderColor: "red" } : { borderColor: "gray" }}
+								/>
+							</div>
 							<button
 								type="submit"
 								className="btn btn-secondary"
+								disabled={!confPassword}
 								onClick={e => {
 									onsignInClicked(email, password);
 									e.preventDefault();

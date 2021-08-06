@@ -14,10 +14,10 @@ export const Navbar = () => {
 			<div className="ml-auto">
 				{store.user === "" ? (
 					<>
-						<button className="btn btn-primary mr-1" onClick={() => (history = "/login")}>
-							Log In
+						<button className="btn btn-primary mr-1" onClick={() => history.push("/login")}>
+							Sign In
 						</button>
-						<button className="btn btn-dark" onClick={() => (history = "/register")}>
+						<button className="btn btn-dark" onClick={() => history.push("/registration")}>
 							Register
 						</button>
 					</>
@@ -41,7 +41,7 @@ export const Navbar = () => {
 									actions.userLoggedOut();
 									history.push("/");
 								}}>
-								LogOut
+								Sign out
 							</a>
 						</div>
 					</div>

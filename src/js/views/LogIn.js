@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import { singIn } from "../utilities/signIn";
 import { useHistory } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const LogIn = () => {
+	const { actions } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	let history = useHistory();
