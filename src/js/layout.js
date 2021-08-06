@@ -5,24 +5,27 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import injectContext from "./store/appContext";
 
-import { Contacts } from "./views/Contacts.js";
-import { AddContact } from "./views/AddContact.js";
-import { EditContact } from "./views/EditContact";
 import { Home } from "./views/home";
+import { Navbar } from "./component/navbar";
+import { Footer } from "./component/footer";
+import { Registration } from "./views/Registration";
+import { LogIn } from "./views/LogIn";
+import { Welcome } from "./views/Welcome";
 
 export const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter>
 				<div>
+					<Navbar />
 					<Switch>
-						<Route exact path="/index.html" component={Contacts} />
 						<Route exact path="/" component={Home} />
-						<Route exact path="/contacts" component={Contacts} />
-						<Route exact path="/add" component={AddContact} />
-						<Route exact path="/edit/:index" component={EditContact} />
+						<Route exact path="/registration" component={Registration} />
+						<Route exact path="/login" component={LogIn} />
+						<Route exact path="/welcome" component={Welcome} />
 						<Route render={() => <h1 className="notfound">Not found!</h1>} />
 					</Switch>
+					<Footer />
 				</div>
 			</BrowserRouter>
 		</div>
