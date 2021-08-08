@@ -10,6 +10,7 @@ export const Home = () => {
 					Our mission is
 					<span className="highlight-text"> simple,</span> to bring those who are far from God close to him.
 				</h3>
+				<div className="absolute bg-transparent h-full w-full" />
 			</div>
 		</div>
 	);

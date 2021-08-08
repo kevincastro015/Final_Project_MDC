@@ -9,7 +9,9 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Ocean Life Church</span>
+				<span className="navbar-brand mb-0 h1">
+					<img src="https://browser-coral-planarian-iv0ltgzy.ws-us13.gitpod.io/workspace/Final_Project_MDC_4Geeks/src/img/OCL%20-%20Logo.pngOcean" />
+				</span>
 			</Link>
 			<div className="ml-auto">
 				{store.user === "" ? (
