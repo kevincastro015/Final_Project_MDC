@@ -10,7 +10,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">
-					<img src="https://browser-coral-planarian-iv0ltgzy.ws-us13.gitpod.io/workspace/Final_Project_MDC_4Geeks/src/img/OCL%20-%20Logo.png" />
+					<img src="https://coral-planarian-iv0ltgzy.ws-us13.gitpod.io/files/download/?id=40291ce6-9088-48bc-b18f-052654f980eb" />
 				</span>
 			</Link>
 			<div className="ml-auto">
