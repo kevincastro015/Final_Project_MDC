@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { singIn } from "../utilities/signIn";
 import { useHistory } from "react-router-dom";
+import PeopleWorship from "../../img/PeopleWorshippingSmall.jpg";
 
 export const Home = () => {
 	return (
@@ -8,7 +9,7 @@ export const Home = () => {
 			<div className="card">
 				<div className="row text-over-image">
 					<div className="col-6 image">
-						<img src="https://i.ibb.co/t34tCR9/People-Worshipping-Small.jpg" />
+						<img src={PeopleWorship} />
 					</div>
 
 					<div className="col-6 text text-center text-white h1 h-100 align-self-center">
