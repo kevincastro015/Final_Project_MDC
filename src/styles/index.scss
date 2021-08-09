@@ -84,17 +84,30 @@ body {
      height: 500px;
      width: 100%;
 }
-h3 {
-    font-size: 5.5em;
-    line-height: 1em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: neue-haas-grotesk-display, sans-serif;
-    font-size: 6.8em;
-    line-height: 0.85em;
-    font-weight: 600;
+.card { /* Step 1 */
+
+  overflow: hidden;
+
 }
-img {
-    width: 100%;
-    height: 100%;
+
+.row.text-over-image { /* Step 2 */
+
+  width: 200%;
+
+}
+
+.text { /* Step 3 */
+
+  transform: translateX(-100%);
+
+}
+
+img { /* Step 4 */
+
+  height: 100%;
+
+  width: 100%;
+
+  object-fit: cover;
+
 }
