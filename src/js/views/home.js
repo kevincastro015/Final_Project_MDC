@@ -7,8 +7,9 @@ export const Home = () => {
 		<div className="container">
 			<div id="missionBackground" className="bg-dark text-light">
 				<img
-					src="https://coral-planarian-iv0ltgzy.ws-us13.gitpod.io/files/download/?id=8e53b9b1-bf80-4dfb-bade-83da07d1787e"
-					className="img-responsive"
+					src="https://i.ibb.co/t34tCR9/People-Worshipping-Small.jpg"
+					alt="People-Worshipping-Small"
+					border="0"
 				/>
 				<h3 className="carousel-caption">
 					Our mission is

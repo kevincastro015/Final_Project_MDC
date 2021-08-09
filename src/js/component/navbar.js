@@ -10,7 +10,11 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">
-					<img src="https://coral-planarian-iv0ltgzy.ws-us13.gitpod.io/files/download/?id=40291ce6-9088-48bc-b18f-052654f980eb" />
+					<img
+						src="https://i.ibb.co/0BQTqdy/Ocean-Life-Church-LOGO.png"
+						alt="Ocean-Life-Church-LOGO"
+						border="0"
+					/>
 				</span>
 			</Link>
 			<div className="ml-auto">
