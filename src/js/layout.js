@@ -16,17 +16,15 @@ export const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter>
-				<div>
-					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/registration" component={Registration} />
-						<Route exact path="/login" component={LogIn} />
-						<Route exact path="/welcome" component={Welcome} />
-						<Route render={() => <h1 className="notfound">Not found!</h1>} />
-					</Switch>
-					<Footer />
-				</div>
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/registration" component={Registration} />
+					<Route exact path="/login" component={LogIn} />
+					<Route exact path="/welcome" component={Welcome} />
+					<Route render={() => <h1 className="notfound">Not found!</h1>} />
+				</Switch>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	);
