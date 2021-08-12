@@ -28,9 +28,9 @@ export const LogIn = () => {
 	return (
 		<div className="container-fluid bg-dark">
 			<div className="row justify-content-center">
-				<div className="col-8 mt-3 p-3">
+				<div className="col-8 mt-3 p-2">
 					<form className="has-bg-img text-white rounded shadow-lg">
-						<div className="form-group mx-auto col-6">
+						<div className="form-group ml-auto col-6">
 							<label htmlFor="exampleInputEmail1">Email address</label>
 							<input
 								type="email"
@@ -40,7 +40,7 @@ export const LogIn = () => {
 								onChange={e => setEmail(e.target.value)}
 							/>
 						</div>
-						<div className="form-group mx-auto col-6">
+						<div className="form-group ml-auto col-6">
 							<label htmlFor="exampleInputPassword1">Password</label>
 							<input
 								type="password"
@@ -49,7 +49,7 @@ export const LogIn = () => {
 								onChange={e => setPassword(e.target.value)}
 							/>
 						</div>
-						<div className="submitlogin col-2 mx-auto">
+						<div className="submitlogin col-2 ml-auto">
 							<button
 								type="submit"
 								className="btn btn-primary w-100"
