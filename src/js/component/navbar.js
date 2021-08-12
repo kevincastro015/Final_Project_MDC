@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { singOut } from "../utilities/signOut";
-import OCL from "../../img/OceanLifeChurchLOGO.png";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
@@ -11,7 +10,11 @@ export const Navbar = () => {
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1 w-50">
-					<img src={OCL} alt="Ocean-Life-Church-LOGO" border="0" />
+					<img
+						src="https://i.ibb.co/0BQTqdy/Ocean-Life-Church-LOGO.png"
+						alt="Ocean-Life-Church-LOGO"
+						border="0"
+					/>
 				</span>
 			</Link>
 			<div className="ml-auto">
