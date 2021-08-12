@@ -1,68 +1,102 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import "../../styles/footer.scss";
 
-export const Footer = () => (
-	<footer className="text-center text-lg-start bg-light text-muted">
-		{/* <!-- Section: Social media --> */}
-		<section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-			{/* <!-- Left --> */}
-			<div className="me-5 d-none d-lg-block">
-				<span>Get connected with us on social networks:</span>
-			</div>
-			{/* <!-- Left --> */}
+mapboxgl.accessToken =
+	"pk.eyJ1IjoibWFyY2Vsb2NhbHZlcyIsImEiOiJja3M5NDJyaWcwNTZkMndwNTI5cGxoNGlwIn0.sGO0iW0yrNTyXE6jfrqyaQ";
 
-			{/* <!-- Right --> */}
-			<div>
-				<a href="" className="ml-2 text-reset">
-					<i className="fab fa-facebook-f" />
-				</a>
-				<a href="" className="ml-2 text-reset">
-					<i className="fab fa-instagram" />
-				</a>
-			</div>
-			{/* <!-- Right --> */}
-		</section>
-		{/* <!-- Section: Social media --> */}
+export const Footer = () => {
+	const mapContainer = useRef(null);
+	const map = useRef(null);
+	const [lng, setLng] = useState(-80.18916282390427);
+	const [lat, setLat] = useState(25.760016475659878);
+	const [zoom, setZoom] = useState(16);
+	// 25.760016475659878, -80.18916282390427
+	useEffect(() => {
+		if (map.current) return; // initialize map only once
+		map.current = new mapboxgl.Map({
+			container: mapContainer.current,
+			style: "mapbox://styles/mapbox/streets-v11",
+			center: [lng, lat],
+			zoom: zoom
+		});
+	});
 
-		{/* <!-- Section: Links  --> */}
-		<section className="">
-			<div className="container text-center text-md-start mt-5">
-				{/* <!-- Grid row --> */}
-				<div className="row mt-3">
-					{/* <!-- Grid column --> */}
-					<div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-						{/* <!-- Content --> */}
-						<h6 className="text-uppercase fw-bold mb-4">
-							<i className="fas fa-church mr-2" />
-							Ocean Life Church
-						</h6>
-						<p>
-							Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-							amet, consectetur adipisicing elit.
-						</p>
-					</div>
+	useEffect(() => {
+		if (!map.current) return; // wait for map to initialize
+		map.current.on("move", () => {
+			setLng(map.current.getCenter().lng.toFixed(4));
+			setLat(map.current.getCenter().lat.toFixed(4));
+			setZoom(map.current.getZoom().toFixed(2));
+		});
+	});
+	return (
+		<footer className="text-center text-lg-start bg-light text-muted">
+			{/* <!-- Section: Social media --> */}
+			<section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+				{/* <!-- Left --> */}
+				<div className="me-5 d-none d-lg-block">
+					<span>Get connected with us on social networks:</span>
+				</div>
+				{/* <!-- Left --> */}
 
-					<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-						<h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-						<p>
-							<i className="fas fa-home me-3" /> New York, NY 10012, US
-						</p>
-						<p>
-							<i className="fas fa-envelope me-3" />
-							info@example.com
-						</p>
-						<p>
-							<i className="fas fa-phone me-3" /> + 01 234 567 88
-						</p>
-						<p>
-							<i className="fas fa-print me-3" /> + 01 234 567 89
-						</p>
+				{/* <!-- Right --> */}
+				<div>
+					<a href="" className="ml-2 text-reset">
+						<i className="fab fa-facebook-f" />
+					</a>
+					<a href="" className="ml-2 text-reset">
+						<i className="fab fa-instagram" />
+					</a>
+				</div>
+				{/* <!-- Right --> */}
+			</section>
+			{/* <!-- Section: Social media --> */}
+
+			{/* <!-- Section: Links  --> */}
+			<section className="">
+				<div className="container text-center text-md-start mt-5">
+					{/* <!-- Grid row --> */}
+					<div className="row mt-3">
+						{/* <!-- Grid column --> */}
+						<div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							{/* <!-- Content --> */}
+							<h6 className="text-uppercase fw-bold mb-4">
+								<i className="fas fa-church mr-2" />
+								Ocean Life Church
+							</h6>
+							<p>
+								Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+								amet, consectetur adipisicing elit.
+							</p>
+						</div>
+
+						<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+							<p>
+								<i className="fas fa-home me-3" /> New York, NY 10012, US
+							</p>
+							<p>
+								<i className="fas fa-envelope me-3" />
+								info@example.com
+							</p>
+							<p>
+								<i className="fas fa-phone me-3" /> + 01 234 567 88
+							</p>
+							<p>
+								<i className="fas fa-print me-3" /> + 01 234 567 89
+							</p>
+						</div>
+						<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+							<div ref={mapContainer} className="map-container" />
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05);" }}>
-			© 2021 Copyright Ocean Life Church
-		</div>
-	</footer>
-);
+			<div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05);" }}>
+				© 2021 Copyright Ocean Life Church
+			</div>
+		</footer>
+	);
+};
