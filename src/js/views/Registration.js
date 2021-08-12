@@ -32,59 +32,51 @@ export const Registration = () => {
 
 	return (
 		<span>
-			<div className="sidenav">
-				<div className="login-main-text">
-					<h2>
-						Application
-						<br /> Login Page
-					</h2>
-					<p>Login or register from here to access.</p>
-				</div>
-			</div>
-			<div className="main">
-				<div className="col-md-6 col-sm-12">
-					<div className="login-form">
-						<form>
-							<div className="form-group">
-								<label>Email</label>
-								<input
-									type="text"
-									className="form-control"
-									placeholder="Email"
-									onChange={e => setEmail(e.target.value)}
-								/>
-							</div>
-							<div className="form-group">
-								<label>Password</label>
-								<input
-									type="password"
-									className="form-control"
-									placeholder="Password"
-									onChange={e => setPassword(e.target.value)}
-								/>
-							</div>
-							<div className="form-group">
-								<label>Confirm your Password</label>
-								<input
-									type="password"
-									className="form-control"
-									placeholder="Password"
-									onChange={e => setConfirmation(e.target.value)}
-									style={!confPassword ? { borderColor: "red" } : { borderColor: "gray" }}
-								/>
-							</div>
-							<button
-								type="submit"
-								className="btn btn-secondary"
-								disabled={!confPassword}
-								onClick={e => {
-									onsignInClicked(email, password);
-									e.preventDefault();
-								}}>
-								Register
-							</button>
-						</form>
-					</div>
+			<div className="row justify-content-center">
+				<div className="col-8 mt-3 p-3">
+					<form>
+						<div className="form-group">
+							<label htmlFor="validationDefault01">Email</label>
+							<input
+								type="text"
+								className="form-control"
+								placeholder="Email"
+								required
+								onChange={e => setEmail(e.target.value)}
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="validationDefault02">Password</label>
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Password"
+								required
+								onChange={e => setPassword(e.target.value)}
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="validationDefault03">Confirm your Password</label>
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Password"
+								required
+								onChange={e => setConfirmation(e.target.value)}
+								style={!confPassword ? { borderColor: "red" } : { borderColor: "gray" }}
+							/>
+						</div>
+						<button
+							type="submit"
+							className="btn btn-secondary"
+							disabled={!confPassword}
+							onClick={e => {
+								onsignInClicked(email, password);
+								e.preventDefault();
+							}}>
+							Register
+						</button>
+					</form>
 				</div>
 			</div>
 		</span>

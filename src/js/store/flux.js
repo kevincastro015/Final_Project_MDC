@@ -9,7 +9,6 @@ const getState = ({ getStore, setStore }) => {
 			// Remember to use the scope: scope.state.store & scope.setState()
 			userLoggedIn: userName => {
 				setStore({ user: userName });
-				console.log(getStore().user);
 			},
 			userLoggedOut: () => {
 				setStore({ user: "" });
