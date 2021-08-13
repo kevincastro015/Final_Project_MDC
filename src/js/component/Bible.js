@@ -49,8 +49,23 @@ export const Bible = () => {
 		 **/
 		getResults(verseID).then(data => {
 			const passage = data.passages[0];
+			let aux;
+			let script = "";
+			for (let i = 0; i < passage.content.length; i++) {
+				if (passage.content[i] === "<") {
+					aux = true;
+				}
+				if (!aux) {
+					script = script + passage.content[i];
+				}
+				if (passage.content[i] === ">") {
+					aux = false;
+					script = script + " ";
+				}
+			}
+
 			setVerseRef(passage.reference);
-			setVerse(passage.content);
+			setVerse(script);
 			// verseRef.innerHTML = `<span><i>${passage.reference}</i></span>`;
 			// verse.innerHTML = <div className="text eb-container">${passage.content}</div>;
 		});
@@ -83,24 +98,16 @@ export const Bible = () => {
 		});
 	}
 	return (
-		<>
-			<div className="subheader">
-				<div className="container flex">
-					<div className="subheadings">
-						<h2>Verse of the Day:</h2>
-						<h3 id="viewing">
-							<span id="verse">
-								<i>{verseRef}</i>
-							</span>
-						</h3>
-					</div>
+		<div className="container">
+			<div className="row ">
+				<div className="col-12 bg-light">
+					<h2>Verse of the Day:</h2>
+					<h3 id="viewing">
+						<i>{verseRef}</i>
+					</h3>
 				</div>
+				<div className="col-12">{verse}</div>
 			</div>
-			<main className="container">
-				<div id="verse-content" className="verse-container">
-					<div className="text eb-container">{verse}</div>
-				</div>
-			</main>
-		</>
+		</div>
 	);
 };
