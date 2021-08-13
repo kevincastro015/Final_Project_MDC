@@ -6,30 +6,6 @@ mapboxgl.accessToken =
 	"pk.eyJ1IjoibWFyY2Vsb2NhbHZlcyIsImEiOiJja3M5NDJyaWcwNTZkMndwNTI5cGxoNGlwIn0.sGO0iW0yrNTyXE6jfrqyaQ";
 
 export const Footer = () => {
-	const mapContainer = useRef(null);
-	const map = useRef(null);
-	const [lng, setLng] = useState(-80.18916282390427);
-	const [lat, setLat] = useState(25.760016475659878);
-	const [zoom, setZoom] = useState(16);
-	// 25.760016475659878, -80.18916282390427
-	useEffect(() => {
-		if (map.current) return; // initialize map only once
-		map.current = new mapboxgl.Map({
-			container: mapContainer.current,
-			style: "mapbox://styles/mapbox/streets-v11",
-			center: [lng, lat],
-			zoom: zoom
-		});
-	});
-
-	useEffect(() => {
-		if (!map.current) return; // wait for map to initialize
-		map.current.on("move", () => {
-			setLng(map.current.getCenter().lng.toFixed(4));
-			setLat(map.current.getCenter().lat.toFixed(4));
-			setZoom(map.current.getZoom().toFixed(2));
-		});
-	});
 	return (
 		<footer className="text-center text-lg-start bg-light text-muted">
 			{/* <!-- Section: Social media --> */}
@@ -88,7 +64,11 @@ export const Footer = () => {
 							</p>
 						</div>
 						<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-							<div ref={mapContainer} className="map-container" />
+							{/* <div ref={mapContainer} className="map-container" /> */}
+							<img
+								alt="static Mapbox map of the Ocean Life Church miami area"
+								src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+555555(-80.18916282390427,25.760016475659878)/-80.1892,25.7602,15.96,0/300x300?access_token=pk.eyJ1IjoibWFyY2Vsb2NhbHZlcyIsImEiOiJja3M5NDJyaWcwNTZkMndwNTI5cGxoNGlwIn0.sGO0iW0yrNTyXE6jfrqyaQ"
+							/>
 						</div>
 					</div>
 				</div>
