@@ -41,26 +41,23 @@ export const Footer = () => {
 								<i className="fas fa-church mr-2" />
 								Ocean Life Church
 							</h6>
-							<p>
-								Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-								amet, consectetur adipisicing elit.
-							</p>
+							<p>Jesus is our message. People are our heart.</p>
 						</div>
 
 						<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 							<h6 className="text-uppercase fw-bold mb-4">Contact</h6>
 							<p>
-								<i className="fas fa-home me-3" /> New York, NY 10012, US
+								<i className="fas fa-home me-3" /> 301 Biscayne Blvd, Miami, FL 33132
 							</p>
 							<p>
 								<i className="fas fa-envelope me-3" />
-								info@example.com
+								Hello@OceanLifeChurch.com
 							</p>
 							<p>
-								<i className="fas fa-phone me-3" /> + 01 234 567 88
+								<i className="fas fa-phone me-3" /> 305-305-3050
 							</p>
 							<p>
-								<i className="fas fa-print me-3" /> + 01 234 567 89
+								<i className="fas fa-print me-3" /> 305-305-3051
 							</p>
 						</div>
 						<div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

@@ -30,21 +30,23 @@ export const LogIn = () => {
 			<div className="row justify-content-center">
 				<div className="col-8 mt-3 p-2">
 					<form className="has-bg-img text-white rounded shadow-lg">
-						<div className="form-group ml-auto col-6">
-							<label htmlFor="exampleInputEmail1">Email address</label>
+						<div className="form-group ml-auto col-5">
+							<label htmlFor="exampleInputEmail1">Email Address</label>
 							<input
 								type="email"
 								className="form-control"
+								placeholder="Email Address"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								onChange={e => setEmail(e.target.value)}
 							/>
 						</div>
-						<div className="form-group ml-auto col-6">
+						<div className="form-group ml-auto col-5">
 							<label htmlFor="exampleInputPassword1">Password</label>
 							<input
 								type="password"
 								className="form-control"
+								placeholder="Password"
 								id="exampleInputPassword1"
 								onChange={e => setPassword(e.target.value)}
 							/>
@@ -57,7 +59,7 @@ export const LogIn = () => {
 									onsignInClicked(email, password);
 									e.preventDefault();
 								}}>
-								Submit
+								LogIn
 							</button>
 						</div>
 					</form>
