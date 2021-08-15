@@ -40,7 +40,7 @@ export const Registration = () => {
 							<input
 								type="text"
 								className="form-control"
-								placeholder="Email Address"
+								placeholder="Email"
 								required
 								onChange={e => setEmail(e.target.value)}
 							/>
@@ -56,7 +56,7 @@ export const Registration = () => {
 							/>
 						</div>
 						<div className="form-group ml-auto col-5">
-							<label htmlFor="validationDefault03">Confirm your Password</label>
+							<label htmlFor="validationDefault03">Confirm Password</label>
 							<input
 								type="password"
 								className="form-control"

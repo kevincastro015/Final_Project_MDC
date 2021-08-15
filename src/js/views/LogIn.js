@@ -31,11 +31,11 @@ export const LogIn = () => {
 				<div className="col-8 mt-3 p-2">
 					<form className="has-bg-img text-white rounded shadow-lg">
 						<div className="form-group ml-auto col-5">
-							<label htmlFor="exampleInputEmail1">Email Address</label>
+							<label htmlFor="exampleInputEmail1">Email</label>
 							<input
 								type="email"
 								className="form-control"
-								placeholder="Email Address"
+								placeholder="Email"
 								id="exampleInputEmail1"
 								aria-describedby="emailHelp"
 								onChange={e => setEmail(e.target.value)}

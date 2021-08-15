@@ -11,8 +11,8 @@ export const Home = () => {
 				description="Our mission is simple, to bring those who are far from God close to him."
 			/>
 			<PageImages
-				img="https://i.ibb.co/t34tCR9/People-Worshipping-Small.jpg"
-				description="Our mission is simple, to bring those who are far from God close to him."
+				img="https://i.ibb.co/wW8vVC8/Praise-And-Prayer.jpg"
+				description="Prayer is our first reponse not our last resort."
 			/>
 		</div>
 	);
