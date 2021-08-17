@@ -14,6 +14,7 @@ export const Home = () => {
 				img="https://i.ibb.co/wW8vVC8/Praise-And-Prayer.jpg"
 				description="Prayer is our first reponse not our last resort."
 			/>
+			<PageImages img="https://i.ibb.co/G7wYMWV/Volunteering.jpg" description="Excellence Is Our Spirit" />
 		</div>
 	);
 };

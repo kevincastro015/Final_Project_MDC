@@ -41,15 +41,15 @@ export const Bible = () => {
 	const verseID = store.verses[verseIndex];
 
 	return (
-		<div className="container">
-			<div className="row ">
-				<div className="col-12 bg-light">
+		<div className="containe">
+			<div className="row bg-dark text-light">
+				<div className="col-12">
 					<h2>Verse of the Day:</h2>
 					<h3 id="viewing">
 						<i>{verseRef}</i>
 					</h3>
 				</div>
-				<div className="col-12">{verse}</div>
+				<div className="col-12 bg-dark text-light">{verse}</div>
 			</div>
 		</div>
 	);
