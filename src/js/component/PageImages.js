@@ -5,7 +5,7 @@ export const PageImages = props => {
 	return (
 		<div className="row text-over-image mt-4 mb-2">
 			<div className="col-6 image">
-				<img src={props.img} />
+				<img src={props.img} style={{ height: "75vh", width: "100%", objectFit: "cover" }} />
 			</div>
 
 			<div className="col-6 text text-center text-white h1 h-100 align-self-center">{props.description}</div>
