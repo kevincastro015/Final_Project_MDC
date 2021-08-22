@@ -11,6 +11,7 @@ import { Footer } from "./component/footer";
 import { Registration } from "./views/Registration";
 import { LogIn } from "./views/LogIn";
 import { Welcome } from "./views/Welcome";
+import { FullRegistration } from "./views/FullRegistration";
 
 export const Layout = () => {
 	return (
@@ -22,6 +23,7 @@ export const Layout = () => {
 					<Route exact path="/registration" component={Registration} />
 					<Route exact path="/login" component={LogIn} />
 					<Route exact path="/welcome" component={Welcome} />
+					<Route exact path="/fullregistration" component={FullRegistration} />
 					<Route render={() => <h1 className="notfound">Not found!</h1>} />
 				</Switch>
 				<Footer />
