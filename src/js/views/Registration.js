@@ -24,7 +24,7 @@ export const Registration = () => {
 				let username = getEmail.slice(0, position);
 				actions.userLoggedIn(username);
 			});
-			history.push("/welcome");
+			history.push("/fullregistration");
 		} catch (e) {
 			alert(e.message);
 		}

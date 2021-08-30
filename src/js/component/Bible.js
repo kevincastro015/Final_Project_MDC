@@ -33,15 +33,13 @@ export const Bible = () => {
 
 			setVerseRef(passage.reference);
 			setVerse(script);
-			// verseRef.innerHTML = `<span><i>${passage.reference}</i></span>`;
-			// verse.innerHTML = <div className="text eb-container">${passage.content}</div>;
 		});
 	}, []);
 	const verseIndex = Math.floor(Math.random() * store.verses.length);
 	const verseID = store.verses[verseIndex];
 
 	return (
-		<div className="containe">
+		<div className="container">
 			<div className="row bg-dark text-light">
 				<div className="col-12">
 					<h2>Verse of the Day:</h2>
