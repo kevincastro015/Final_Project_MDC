@@ -37,8 +37,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 			// Remember to use the scope: scope.state.store & scope.setState()
 			userLoggedIn: userName => {
 				localStorage.setItem("user", userName);
-				const user = localStorage.getItem("user");
-				setStore({ user: user });
+				const userN = localStorage.getItem("user");
+				setStore({ user: userN });
 			},
 			userLoggedOut: () => {
 				localStorage.clear();

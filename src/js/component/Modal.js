@@ -1,24 +1,20 @@
-import React, { useState, useContext } from "react";
-import { withRouter } from "react-router-dom";
+import React from "react";
 import PropTypes from "prop-types";
-import { Context } from "../store/appContext";
+
+import { Bible } from "./Bible";
 
 export const Modal = props => {
-	const { actions } = useContext(Context);
-	const [state, setState] = useState({
-		//initialize state here
-	});
 	return (
 		<div className="modal" tabIndex="-1" role="dialog" style={{ display: props.show ? "inline-block" : "none" }}>
-			<div className="modal-dialog" role="document">
+			<div className="modal-dialog modal-dialog-centered" role="document">
 				<div className="modal-content">
-					<div className="modal-header">
-						<h5 className="modal-title">Are you sure?</h5>
+					<div className="modal-header bg-dark text-light">
+						{/* <h5 className="modal-title">Are you sure?</h5> */}
 						{props.onClose ? (
 							<button
 								onClick={() => props.onClose()}
 								type="button"
-								className="close"
+								className="close text-light"
 								data-dismiss="modal"
 								aria-label="Close">
 								<span aria-hidden="true">&times;</span>
@@ -27,28 +23,7 @@ export const Modal = props => {
 							""
 						)}
 					</div>
-					<div className="modal-body">
-						<p>Do you want to delete this contact?</p>
-					</div>
-					<div className="modal-footer">
-						<button
-							type="button"
-							className="btn btn-primary"
-							onClick={() => props.onClose()}
-							data-dismiss="modal">
-							Cancel
-						</button>
-						<button
-							type="button"
-							className="btn btn-danger"
-							data-dismiss="modal"
-							onClick={() => {
-								actions.deleteApiContact(props.id);
-								props.onClose();
-							}}>
-							Delete
-						</button>
-					</div>
+					<Bible />
 				</div>
 			</div>
 		</div>
@@ -59,10 +34,8 @@ export const Modal = props => {
  * your component's properties
  **/
 Modal.propTypes = {
-	history: PropTypes.object,
 	onClose: PropTypes.func,
-	show: PropTypes.bool,
-	id: PropTypes.string
+	show: PropTypes.bool
 };
 
 /**
@@ -70,6 +43,6 @@ Modal.propTypes = {
  * your component's properties
  **/
 Modal.defaultProps = {
-	show: false,
+	show: true,
 	onClose: null
 };
