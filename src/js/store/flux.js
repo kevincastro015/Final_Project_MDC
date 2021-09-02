@@ -1,4 +1,4 @@
-const getState = ({ getStore, setStore }) => {
+const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
 			//Your data structures, A.K.A Entities
@@ -36,9 +36,12 @@ const getState = ({ getStore, setStore }) => {
 			//(Arrow) Functions that update the Store
 			// Remember to use the scope: scope.state.store & scope.setState()
 			userLoggedIn: userName => {
-				setStore({ user: userName });
+				localStorage.setItem("user", userName);
+				const user = localStorage.getItem("user");
+				setStore({ user: user });
 			},
 			userLoggedOut: () => {
+				localStorage.clear();
 				setStore({ user: "" });
 			},
 			getVerse: verseID => {
