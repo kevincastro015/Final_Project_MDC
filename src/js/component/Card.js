@@ -26,19 +26,17 @@ const Card = () => {
 
 let dogs = [
 	{
-		breed: "Labrador Retriever",
+		breed: "Financial Peace University",
 		description:
-			"The sweet-faced, lovable Labrador Retriever is America's most popular dog breed. Labs are friendly, outgoing, and high-spirited companions who have more than enough affection to go around for a family looking for a medium-to-large dog.",
-		image:
-			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/29150201/Labrador-Retrievers-three-colors.jpg",
+			"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+		image: "https://i.ibb.co/R7mnb7c/pexels-mikhail-nilov-8297031.jpg",
 		url: "https://www.akc.org/dog-breeds/labrador-retriever/"
 	},
 	{
-		breed: "Pug",
+		breed: "Pre-Marriage Course",
 		description:
 			"Once the mischievous companion of Chinese emperors, and later the mascot of Holland's royal House of Orange, the small but solid Pug is today adored by his millions of fans around the world. Pugs live to love and to be loved in return.",
-		image:
-			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225358/Pug-On-White-01.jpg",
+		image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg",
 		url: "https://www.akc.org/dog-breeds/pug/"
 	},
 	{
