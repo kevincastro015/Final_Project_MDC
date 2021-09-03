@@ -33,24 +33,24 @@ let dogs = [
 		url: "https://www.akc.org/dog-breeds/labrador-retriever/"
 	},
 	{
-		breed: "Pre-Marriage Course",
+		breed: "SYMBIS",
 		description:
-			"Once the mischievous companion of Chinese emperors, and later the mascot of Holland's royal House of Orange, the small but solid Pug is today adored by his millions of fans around the world. Pugs live to love and to be loved in return.",
+			"Saving Your Marriage Before It Starts is a six-week relationship course covering conflict resolution; sex and intimacy; finances; spiritual unity; husband/wife roles, and more.",
 		image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg",
 		url: "https://www.akc.org/dog-breeds/pug/"
 	},
 	{
-		breed: "Dachshund",
+		breed: "ALPHA",
 		description:
-			"The famously long, low silhouette, ever-alert expression, and bold, vivacious personality of the Dachshund have made him a superstar of the canine kingdom. Dachshunds come in two sizes and in three coat types of various colors and patterns.",
+			"The Alpha course is an evangelistic course which seeks to introduce the basics of the Christian faith through a series of talks and discussions. As a follower of Jesus, we want you to be resourced to answer tough questions about your faith as well as guide others to know more about the 'why' behind our beliefs.",
 		image:
 			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/07143625/Dachshund-standing-outdoors.jpg",
 		url: "https://www.akc.org/dog-breeds/dachshund/"
 	},
 	{
-		breed: "Australian Shepherd",
+		breed: "The Bible Study",
 		description:
-			"The Australian Shepherd, a lean, tough ranch dog, is one of those 'only in America' stories: a European breed perfected in California by way of Australia. Fixtures on the rodeo circuit, they are closely associated with the cowboy life.",
+			"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
 		image:
 			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/03173132/Australian-Shepherd.1.jpg",
 		url: "https://www.akc.org/dog-breeds/australian-shepherd/"
