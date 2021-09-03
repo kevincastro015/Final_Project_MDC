@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import firebase from "firebase/app";
+import "firebase/firestore";
 import "firebase/analytics";
 import "firebase/auth";
 //include bootstrap npm library into the bundle
@@ -15,14 +16,14 @@ import "../styles/index.scss";
 import Layout from "./layout";
 
 // firebase
-var firebaseConfig = {
-	apiKey: "AIzaSyCnA4GgmY_JfwVgDFlCziUZ6O8IRW4KS_Q",
-	authDomain: "auth-test-b70e7.firebaseapp.com",
-	projectId: "auth-test-b70e7",
-	storageBucket: "auth-test-b70e7.appspot.com",
-	messagingSenderId: "315619237157",
-	appId: "1:315619237157:web:cfdb1c138c8cc67ec14ecc",
-	measurementId: "G-EH8D5T5PM2"
+const firebaseConfig = {
+	apiKey: "AIzaSyC8KvBrvh0bYpwytHKEdD08eJ0tnPCUWko",
+	authDomain: "ocean-life-church.firebaseapp.com",
+	projectId: "ocean-life-church",
+	storageBucket: "ocean-life-church.appspot.com",
+	messagingSenderId: "977293261723",
+	appId: "1:977293261723:web:cec9886ea3b0e5879a3f3e",
+	measurementId: "G-6R9MD78K4K"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

@@ -1,3 +1,5 @@
+import firebase from "firebase";
+
 const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
@@ -30,6 +32,32 @@ const getState = ({ getStore, setStore, getActions }) => {
 				`MRK.10.44-45`,
 				`JHN.4.13-14`,
 				`LUK.5.31-32`
+			],
+			classes: [
+				{
+					title: "Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+				},
+				{
+					title: "SYMBIS",
+					description:
+						"Saving Your Marriage Before It Starts is a six-week relationship course covering conflict resolution; sex and intimacy; finances; spiritual unity; husband/wife roles, and more.",
+					image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg"
+				},
+				{
+					title: "ALPHA",
+					description:
+						"The Alpha course is an evangelistic course which seeks to introduce the basics of the Christian faith through a series of talks and discussions. As a follower of Jesus, we want you to be resourced to answer tough questions about your faith as well as guide others to know more about the 'why' behind our beliefs.",
+					image: "https://i.ibb.co/ZcR4L3Z/ALPHAcourse.jpg"
+				},
+				{
+					title: "The Bible Study",
+					description:
+						"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
+					image: "https://i.ibb.co/TKLQNqV/The-Bible-Study.jpg"
+				}
 			]
 		},
 		actions: {
@@ -43,6 +71,24 @@ const getState = ({ getStore, setStore, getActions }) => {
 			userLoggedOut: () => {
 				localStorage.clear();
 				setStore({ user: "" });
+			},
+			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip) => {
+				console.log([uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip]);
+				firebase
+					.firestore()
+					.collections("users")
+					.doc(id)
+					.set({
+						name: uName,
+						lasName: uLastName,
+						phone: uPhone,
+						address: uAddress,
+						address2: uAddress2,
+						city: uCity,
+						state: uState,
+						zip: uZip
+					})
+					.catch(e => console.log(e));
 			},
 			getVerse: verseID => {
 				const API_KEY = "f0c3f22e7fe62e154590fb25c584f048";
@@ -66,6 +112,15 @@ const getState = ({ getStore, setStore, getActions }) => {
 					xhr.send();
 				});
 			}
+			// getMap: () => {
+			// 	mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY2Vsb2NhbHZlcyIsImEiOiJja3M5NDJyaWcwNTZkMndwNTI5cGxoNGlwIn0.sGO0iW0yrNTyXE6jfrqyaQ';
+			// 	const map = new mapboxgl.Map({
+			// 		container: 'map', // container ID
+			// 		style: 'mapbox://styles/mapbox/streets-v11', // style URL
+			// 		center: [-74.5, 40], // starting position
+			// 		zoom: 9 // starting zoom
+			// 	});
+			// }
 		}
 	};
 };
