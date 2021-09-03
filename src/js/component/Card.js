@@ -29,7 +29,7 @@ let dogs = [
 		breed: "Financial Peace University",
 		description:
 			"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-		image: "https://i.ibb.co/R7mnb7c/pexels-mikhail-nilov-8297031.jpg",
+		image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
 		url: "https://www.akc.org/dog-breeds/labrador-retriever/"
 	},
 	{
@@ -43,14 +43,14 @@ let dogs = [
 		breed: "ALPHA",
 		description:
 			"The Alpha course is an evangelistic course which seeks to introduce the basics of the Christian faith through a series of talks and discussions. As a follower of Jesus, we want you to be resourced to answer tough questions about your faith as well as guide others to know more about the 'why' behind our beliefs.",
-		image: "https://rose-fox-n5eg1ghd.ws-us16.gitpod.io/files/download/?id=12aeb80f-89eb-4735-9f35-8834a7edaa77",
+		image: "https://i.ibb.co/ZcR4L3Z/ALPHAcourse.jpg",
 		url: "https://www.akc.org/dog-breeds/dachshund/"
 	},
 	{
 		breed: "The Bible Study",
 		description:
 			"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
-		image: "https://rose-fox-n5eg1ghd.ws-us16.gitpod.io/files/download/?id=24a867f8-84de-40bd-af0a-6c2a349314fc",
+		image: "https://i.ibb.co/TKLQNqV/The-Bible-Study.jpg",
 		url: "https://www.akc.org/dog-breeds/australian-shepherd/"
 	}
 ];
