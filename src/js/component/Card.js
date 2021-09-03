@@ -43,16 +43,14 @@ let dogs = [
 		breed: "ALPHA",
 		description:
 			"The Alpha course is an evangelistic course which seeks to introduce the basics of the Christian faith through a series of talks and discussions. As a follower of Jesus, we want you to be resourced to answer tough questions about your faith as well as guide others to know more about the 'why' behind our beliefs.",
-		image:
-			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/07143625/Dachshund-standing-outdoors.jpg",
+		image: "https://rose-fox-n5eg1ghd.ws-us16.gitpod.io/files/download/?id=12aeb80f-89eb-4735-9f35-8834a7edaa77",
 		url: "https://www.akc.org/dog-breeds/dachshund/"
 	},
 	{
 		breed: "The Bible Study",
 		description:
 			"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
-		image:
-			"https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/03173132/Australian-Shepherd.1.jpg",
+		image: "https://rose-fox-n5eg1ghd.ws-us16.gitpod.io/files/download/?id=24a867f8-84de-40bd-af0a-6c2a349314fc",
 		url: "https://www.akc.org/dog-breeds/australian-shepherd/"
 	}
 ];
