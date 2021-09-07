@@ -20,7 +20,22 @@ export const FullRegistration = () => {
 		<span>
 			<div className="row justify-content-center bg-dark">
 				<div className="col-8 mt-3 p-3">
-					<form className="text-white rounded">
+					<form
+						className="text-white rounded"
+						onSubmit={e => {
+							e.preventDefault();
+							actions.userFullRegistration(
+								userName,
+								userLastName,
+								userPhone,
+								userAddress,
+								userAddress2,
+								userCity,
+								userState,
+								userZip
+							);
+							history.push("/welcome");
+						}}>
 						<div className="form-row">
 							<div className="form-group col-md-6">
 								<label htmlFor="inputName4">Name</label>
@@ -102,23 +117,7 @@ export const FullRegistration = () => {
 								/>
 							</div>
 						</div>
-						<button
-							type="submit"
-							className="btn btn-primary"
-							onClick={() => {
-								actions.userFullRegistration(
-									userName,
-									userLastName,
-									userPhone,
-									userAddress,
-									userAddress2,
-									userCity,
-									userState,
-									userZip
-								);
-								history.push("/welcome");
-								e.preventDefault();
-							}}>
+						<button type="submit" className="btn btn-primary">
 							Submit
 						</button>
 					</form>
