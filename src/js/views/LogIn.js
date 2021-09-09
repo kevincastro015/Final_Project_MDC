@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+
 import "../../styles/home.scss";
 import { singIn } from "../utilities/signIn";
 import { useHistory } from "react-router-dom";
@@ -15,9 +15,12 @@ export const LogIn = () => {
 		try {
 			await singIn(email, password).then(userCredential => {
 				let getEmail = userCredential.user.email;
+				let getUserId = userCredential.user.uid;
 				let position = getEmail.indexOf("@");
-				let username = getEmail.slice(0, position);
-				actions.userLoggedIn(username);
+				let userInfo = [getEmail.slice(0, position), getUserId];
+				localStorage.setItem("userName", userInfo[0]);
+				localStorage.setItem("userId", userInfo[1]);
+				actions.userLoggedIn();
 			});
 			history.push("/welcome");
 		} catch (e) {

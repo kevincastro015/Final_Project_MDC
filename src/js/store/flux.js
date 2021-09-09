@@ -5,7 +5,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
 			//Your data structures, A.K.A Entities
-			user: "",
+			userName: "",
+			userId: "",
 			verses: [
 				`MAT.5.16`,
 				`PSA.23`,
@@ -76,14 +77,15 @@ const getState = ({ getStore, setStore, getActions }) => {
 		actions: {
 			//(Arrow) Functions that update the Store
 			// Remember to use the scope: scope.state.store & scope.setState()
-			userLoggedIn: userName => {
-				localStorage.setItem("user", userName);
-				const userN = localStorage.getItem("user");
-				setStore({ user: userN });
+			userLoggedIn: () => {
+				const userName = localStorage.getItem("userName");
+				const userId = localStorage.getItem("userId");
+				setStore({ userName: userName });
+				setStore({ userId: userId });
 			},
 			userLoggedOut: () => {
 				localStorage.clear();
-				setStore({ user: "" });
+				setStore({ userName: "" });
 			},
 			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip, id) => {
 				firebase

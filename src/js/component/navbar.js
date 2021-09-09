@@ -18,7 +18,7 @@ export const Navbar = () => {
 				</span>
 			</Link>
 			<div className="ml-auto">
-				{store.user === "" ? (
+				{localStorage.getItem("userName") === null ? (
 					<>
 						<button className="btn btn-primary mr-1" onClick={() => history.push("/login")}>
 							Sign In
@@ -36,7 +36,7 @@ export const Navbar = () => {
 							data-toggle="dropdown"
 							aria-haspopup="true"
 							aria-expanded="false">
-							Welcome {store.user}
+							Welcome {localStorage.getItem("userName")}
 						</button>
 						<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 							<a
