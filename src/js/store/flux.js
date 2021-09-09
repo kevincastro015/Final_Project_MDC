@@ -73,11 +73,10 @@ const getState = ({ getStore, setStore, getActions }) => {
 				localStorage.clear();
 				setStore({ user: "" });
 			},
-			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip) => {
-				console.log([uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip]);
+			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip, id) => {
 				firebase
 					.firestore()
-					.collections("users")
+					.collection("users")
 					.doc(id)
 					.set({
 						name: uName,
