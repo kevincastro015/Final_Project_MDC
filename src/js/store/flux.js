@@ -42,6 +42,18 @@ const getState = ({ getStore, setStore, getActions }) => {
 					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
 				},
 				{
+					title: "Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+				},
+				{
+					title: "Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+				},
+				{
 					title: "SYMBIS",
 					description:
 						"Saving Your Marriage Before It Starts is a six-week relationship course covering conflict resolution; sex and intimacy; finances; spiritual unity; husband/wife roles, and more.",
@@ -88,7 +100,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 						state: uState,
 						zip: uZip
 					})
-					.catch(e => console.log(e));
+					.catch(e => alert(e));
 			},
 			getVerse: verseID => {
 				const API_KEY = "f0c3f22e7fe62e154590fb25c584f048";
