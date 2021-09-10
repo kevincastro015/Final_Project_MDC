@@ -20,7 +20,7 @@ export const LogIn = () => {
 				let userInfo = [getEmail.slice(0, position), getUserId];
 				localStorage.setItem("userName", userInfo[0]);
 				localStorage.setItem("userId", userInfo[1]);
-				actions.userLoggedIn();
+				actions.userLoggedIn(userInfo);
 			});
 			history.push("/welcome");
 		} catch (e) {

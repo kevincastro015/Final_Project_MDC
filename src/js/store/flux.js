@@ -40,25 +40,29 @@ const getState = ({ getStore, setStore, getActions }) => {
 					title: "Financial Peace University",
 					description:
 						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
 				},
 				{
 					title: "Financial Peace University",
 					description:
 						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
 				},
 				{
 					title: "Financial Peace University",
 					description:
 						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png"
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
 				},
 				{
 					title: "SYMBIS",
 					description:
 						"Saving Your Marriage Before It Starts is a six-week relationship course covering conflict resolution; sex and intimacy; finances; spiritual unity; husband/wife roles, and more.",
-					image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg"
+					image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
 				},
 				{
 					title: "ALPHA",
@@ -70,7 +74,45 @@ const getState = ({ getStore, setStore, getActions }) => {
 					title: "The Bible Study",
 					description:
 						"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
-					image: "https://i.ibb.co/TKLQNqV/The-Bible-Study.jpg"
+					image: "https://i.ibb.co/TKLQNqV/The-Bible-Study.jpg",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
+				}
+			],
+			recordedClasses: [
+				{
+					title: "Day 01 - Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
+				},
+				{
+					title: "Day 02 - Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
+				},
+				{
+					title: "Day 03 - Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
+				},
+				{
+					title: "Day 04 - Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
+				},
+				{
+					title: "Day 05 - Financial Peace University",
+					description:
+						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
+					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
+					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
 				}
 			]
 		},
@@ -87,7 +129,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 				localStorage.clear();
 				setStore({ userName: "" });
 			},
-			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip, id) => {
+			userFullRegistration: (uName, uLastName, uPhone, uAddress, uAddress2, uCity, uState, uZip) => {
+				let id = localStorage.getItem("userId");
 				firebase
 					.firestore()
 					.collection("users")

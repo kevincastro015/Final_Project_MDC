@@ -3,80 +3,51 @@ import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import MikePhoto from "../../img/m101.jpg";
 import { Context } from "../store/appContext";
-import { Modal } from "../component/Modal";
+import { ModalVideo } from "../component/Modal";
+import ReactPlayer from "react-player";
+import YouTubePlayer from "react-player/youtube";
 
-export const ContactCard = ({ element, index, onDelete, match }) => {
-	const [state, setState] = useState({
-		//initialize state here
-	});
+export const ContactCard = () => {
 	const { store, actions } = useContext(Context);
+	const [state, setState] = useState({});
 	let history = useHistory();
 
 	return (
 		<>
-			<li className="list-group-item">
-				<div className="row w-100">
-					<div className="col-12 col-sm-6 col-md-3 px-0">
-						<img
-							src={MikePhoto}
-							alt="Mike Anamendolla"
-							className="rounded-circle mx-auto d-block img-fluid"
-						/>
-					</div>
-					<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-						<div className="float-right">
-							<Link to={"/edit/" + index}>
-								<button className="btn">
-									<i className="fas fa-pencil-alt mr-3" />
+			{store.recordedClasses.map((recordedClasses, i) => {
+				return (
+					<li className="list-group-item" key={i}>
+						<div className="row w-100">
+							<div className="col-12 col-sm-6 col-md-3 px-0">
+								<img
+									src={recordedClasses.image}
+									alt="Mike Anamendolla"
+									className="rounded-circle mx-auto d-block img-fluid"
+								/>
+							</div>
+							<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+								<label className="name lead">
+									<a href={recordedClasses.link}>{recordedClasses.title}</a>
+								</label>
+								<br />
+								<p>Description:</p>
+								<span className="text-muted">{recordedClasses.description}</span>
+								<button
+									onClick={() => {
+										setState({ showModal: true });
+									}}>
+									Watch
 								</button>
-							</Link>
-							<button className="btn" onClick={() => setState({ showModal: true })}>
-								<i className="fas fa-trash-alt" />
-							</button>
+								<ModalVideo
+									show={state.showModal}
+									onClose={() => setState({ showModal: false })}
+									videoLink={recordedClasses.link}
+								/>
+							</div>
 						</div>
-						<label className="name lead">{element.full_name}</label>
-						<br />
-						<i className="fas fa-map-marker-alt text-muted mr-3" />
-						<span className="text-muted">{element.address}</span>
-						<br />
-						<span
-							className="fa fa-phone fa-fw text-muted mr-3"
-							data-toggle="tooltip"
-							title=""
-							data-original-title={element.phone}
-						/>
-						<span className="text-muted small">{element.phone}</span>
-						<br />
-						<span
-							className="fa fa-envelope fa-fw text-muted mr-3"
-							data-toggle="tooltip"
-							data-original-title=""
-							title=""
-						/>
-						<span className="text-muted small text-truncate">{element.email}</span>
-					</div>
-				</div>
-			</li>
-			<Modal show={state.showModal} onClose={() => setState({ showModal: false })} id={element.id} />
+					</li>
+				);
+			})}
 		</>
 	);
-};
-
-/**
- * Define the data-types for
- * your component's properties
- **/
-ContactCard.propTypes = {
-	match: PropTypes.object,
-	element: PropTypes.object,
-	index: PropTypes.number,
-	onDelete: PropTypes.func
-};
-
-/**
- * Define the default values for
- * your component's properties
- **/
-ContactCard.defaultProps = {
-	onDelete: null
 };

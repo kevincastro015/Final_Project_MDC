@@ -22,8 +22,14 @@ export const Layout = () => {
 					<Route exact path="/" component={Home} />
 					<Route exact path="/registration" component={Registration} />
 					<Route exact path="/login" component={LogIn} />
-					<Route exact path="/welcome" component={Welcome} />
-					<Route exact path="/fullregistration" component={FullRegistration} />
+					{localStorage.getItem("userName") === null ? (
+						""
+					) : (
+						<>
+							<Route exact path="/welcome" component={Welcome} />
+							<Route exact path="/fullregistration" component={FullRegistration} />
+						</>
+					)}
 					<Route render={() => <h1 className="notfound">Not found!</h1>} />
 				</Switch>
 				<Footer />

@@ -5,9 +5,9 @@ const Card = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<div className="row m-2 ">
-			{store.classes.map(classes => {
+			{store.classes.map((classes, i) => {
 				return (
-					<div className="card col-md-4" style={{ width: "10rem" }} key={classes.title}>
+					<div className="card col-md-4" style={{ width: "10rem" }} key={i}>
 						<img className="card-img-top" src={classes.image} alt="Dog image" style={{ height: "10rem" }} />
 						<div className="card-body">
 							<h5 className="card-title">{classes.title}</h5>

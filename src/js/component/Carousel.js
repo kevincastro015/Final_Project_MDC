@@ -40,5 +40,5 @@ export const Carousel = props => {
 };
 
 Carousel.propTypes = {
-	image: PropTypes.string
+	image: PropTypes.array
 };
