@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../component/Card";
-import { ContactCard } from "../component/ContactCard";
+import { RecordedClasses } from "../component/RecordedClasses";
 import { Modal } from "../component/Modal";
 
 export const Welcome = () => {
@@ -44,7 +44,7 @@ export const Welcome = () => {
 					</div>
 
 					<div className="tab-pane fade" id="menu1" role="tabpanel" aria-labelledby="nav-profile-tab">
-						<ContactCard />
+						<RecordedClasses />
 					</div>
 				</div>
 			</div>

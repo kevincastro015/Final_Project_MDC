@@ -3,11 +3,11 @@ import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import MikePhoto from "../../img/m101.jpg";
 import { Context } from "../store/appContext";
-import { ModalVideo } from "../component/Modal";
+import { ModalVideo } from "./Modal";
 import ReactPlayer from "react-player";
 import YouTubePlayer from "react-player/youtube";
 
-export const ContactCard = () => {
+export const RecordedClasses = () => {
 	const { store, actions } = useContext(Context);
 	const [state, setState] = useState({});
 	let history = useHistory();
