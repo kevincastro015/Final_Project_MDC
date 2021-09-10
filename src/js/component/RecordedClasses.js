@@ -10,6 +10,7 @@ import YouTubePlayer from "react-player/youtube";
 export const RecordedClasses = () => {
 	const { store, actions } = useContext(Context);
 	const [state, setState] = useState({});
+	const [videoLink, setVideoLink] = useState("");
 	let history = useHistory();
 
 	return (
@@ -26,9 +27,7 @@ export const RecordedClasses = () => {
 								/>
 							</div>
 							<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-								<label className="name lead">
-									<a href={recordedClasses.link}>{recordedClasses.title}</a>
-								</label>
+								<label className="name lead">{recordedClasses.title}</label>
 								<br />
 								<p>Description:</p>
 								<span className="text-muted">{recordedClasses.description}</span>
@@ -36,14 +35,16 @@ export const RecordedClasses = () => {
 								<button
 									onClick={() => {
 										setState({ showModal: true });
+										setVideoLink(recordedClasses.link);
 									}}>
 									Watch
 								</button>
 								<ModalVideo
 									show={state.showModal}
 									onClose={() => setState({ showModal: false })}
-									videoLink={recordedClasses.link}
+									videoLink={videoLink}
 								/>
+								{console.log(recordedClasses.link)}
 							</div>
 						</div>
 					</li>
