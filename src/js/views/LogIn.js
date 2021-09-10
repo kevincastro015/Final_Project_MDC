@@ -21,6 +21,7 @@ export const LogIn = () => {
 				localStorage.setItem("userName", userInfo[0]);
 				localStorage.setItem("userId", userInfo[1]);
 				actions.userLoggedIn(userInfo);
+				actions.getUserFB();
 			});
 			history.push("/welcome");
 		} catch (e) {

@@ -39,7 +39,7 @@ export const Navbar = () => {
 							Register
 						</button>
 					</>
-				) : localStorage.getItem("userID") === "SZfz2sPscpVnQXanLFpESlnbgQi2" ? (
+				) : localStorage.getItem("userId") === "SZfz2sPscpVnQXanLFpESlnbgQi2" ? (
 					<nav className="nav justify-content-end">
 						<button className="nav-link btn btn-primary mr-2">Active</button>
 						<div className="dropdown">

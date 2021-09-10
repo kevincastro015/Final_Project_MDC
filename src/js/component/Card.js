@@ -16,20 +16,17 @@ const Card = () => {
 						</div>
 						<hr className="m-0" />
 						<div className="text-center m-2">
-							{registered ? (
-								<button className="btn btn-primary text-white" disabled="true">
-									Register
-								</button>
-							) : (
-								<button
-									className="btn btn-primary text-white"
-									onClick={() => {
-										actions.classRegistered(localStorage.getItem("userId"), index);
-										setRegistered(true);
-									}}>
-									Register
-								</button>
-							)}
+							<div className=" alert alert-secondary mr-1" role="alert">
+								{classes.date}
+							</div>
+							<button
+								className=" btn btn-primary text-white ml-1"
+								onClick={() => {
+									actions.classRegistered(localStorage.getItem("userId"), index);
+									alert("You are registered!");
+								}}>
+								Register
+							</button>
 						</div>
 					</div>
 				);

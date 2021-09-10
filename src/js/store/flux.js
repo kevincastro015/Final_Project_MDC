@@ -5,6 +5,7 @@ const getState = ({ getStore, setStore, getActions }) => {
 	return {
 		store: {
 			//Your data structures, A.K.A Entities
+			user: [],
 			userName: "",
 			userId: "",
 			verses: [
@@ -59,15 +60,34 @@ const getState = ({ getStore, setStore, getActions }) => {
 					.doc(id)
 					.set({
 						name: uName,
-						lasName: uLastName,
+						lastName: uLastName,
 						phone: uPhone,
 						address: uAddress,
 						address2: uAddress2,
 						city: uCity,
 						state: uState,
-						zip: uZip
+						zip: uZip,
+						classesRegistered: []
 					})
 					.catch(e => alert(e));
+			},
+			getUserFB: async () => {
+				try {
+					const getUser = firebase.firestore().collection("users");
+					const response = await getUser.get();
+					let aux = [];
+					let auxId = localStorage.getItem("userId");
+					response.forEach(user => {
+						if (auxId === user.id) {
+							aux.push({ ...user.data(), id: user.id });
+						}
+					});
+					setStore({
+						user: aux
+					});
+				} catch (e) {
+					alert(e);
+				}
 			},
 			getVerse: verseID => {
 				const API_KEY = "f0c3f22e7fe62e154590fb25c584f048";
@@ -125,9 +145,6 @@ const getState = ({ getStore, setStore, getActions }) => {
 				const regClass = getStore().classes[index];
 				const id = regClass.id;
 				let newRegister = [...regClass.registered, userId];
-				// console.log("class: ", regClass);
-				// console.log("classId: ", id);
-				// console.log("newArray: ", newRegister);
 				firebase
 					.firestore()
 					.collection("classes")
@@ -140,6 +157,26 @@ const getState = ({ getStore, setStore, getActions }) => {
 					})
 					.catch(e => alert(e));
 				getActions().getClassesFB();
+
+				const user = getStore().user[0];
+				let userNewClassReg = [...user.classesRegistered, id];
+				firebase
+					.firestore()
+					.collection("users")
+					.doc(userId)
+					.set({
+						name: user.name,
+						lastName: user.lastName,
+						phone: user.phone,
+						address: user.address,
+						address2: user.address2,
+						city: user.city,
+						state: user.state,
+						zip: user.zip,
+						classesRegistered: userNewClassReg
+					})
+					.catch(e => alert(e));
+				getActions().getUserFB();
 			}
 
 			// classRegisterd: (id, index) => {
