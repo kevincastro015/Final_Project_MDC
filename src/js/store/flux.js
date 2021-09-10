@@ -153,7 +153,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 						title: regClass.title,
 						description: regClass.description,
 						image: regClass.image,
-						registered: newRegister
+						registered: newRegister,
+						date: regClass.date
 					})
 					.catch(e => alert(e));
 				getActions().getClassesFB();
