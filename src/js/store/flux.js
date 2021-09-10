@@ -35,86 +35,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 				`JHN.4.13-14`,
 				`LUK.5.31-32`
 			],
-			classes: [
-				{
-					title: "Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "SYMBIS",
-					description:
-						"Saving Your Marriage Before It Starts is a six-week relationship course covering conflict resolution; sex and intimacy; finances; spiritual unity; husband/wife roles, and more.",
-					image: "https://i.ibb.co/LnYKqRR/pexels-caio-56926.jpg",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "ALPHA",
-					description:
-						"The Alpha course is an evangelistic course which seeks to introduce the basics of the Christian faith through a series of talks and discussions. As a follower of Jesus, we want you to be resourced to answer tough questions about your faith as well as guide others to know more about the 'why' behind our beliefs.",
-					image: "https://i.ibb.co/ZcR4L3Z/ALPHAcourse.jpg"
-				},
-				{
-					title: "The Bible Study",
-					description:
-						"The Bible Study is a introductory guide through the entire bible. Over the course of a year (separated into 3 seasons), you will dive deeper into scripture, gather historical context and gain a better understanding of what you are reading and how it relates to you as you build a life of richer faith and closeness to God.",
-					image: "https://i.ibb.co/TKLQNqV/The-Bible-Study.jpg",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				}
-			],
-			recordedClasses: [
-				{
-					title: "Day 01 - Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Day 02 - Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Day 03 - Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Day 04 - Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				},
-				{
-					title: "Day 05 - Financial Peace University",
-					description:
-						"Financial Peace University is the proven plan that helps you pay off debt fast and save more money for your future.  Financial Peace University is a nine-lesson course that teaches you how to save for emergencies, pay off debt fast, spend wisely, and invest for your future. And no financial blah blah blah over here. For over 25 years, Dave Ramsey’s been teaching commonsense, biblical money principles that work. Every time.",
-					image: "https://i.ibb.co/0qd9bjR/Financial-Peace-University.png",
-					link: "https://www.youtube.com/watch?v=q5JWp47z4bY"
-				}
-			]
+			classes: [],
+			recordedClasses: []
 		},
 		actions: {
 			//(Arrow) Functions that update the Store
@@ -168,7 +90,61 @@ const getState = ({ getStore, setStore, getActions }) => {
 
 					xhr.send();
 				});
+			},
+			getClassesFB: async () => {
+				try {
+					const getClasses = firebase.firestore().collection("classes");
+					const response = await getClasses.get();
+					let aux = [];
+					response.forEach(classes => {
+						aux.push({ ...classes.data(), id: classes.id });
+					});
+					setStore({
+						classes: aux
+					});
+				} catch (e) {
+					alert(e);
+				}
+			},
+			getRecordedClassesFB: async () => {
+				try {
+					const getRecordedClasses = firebase.firestore().collection("recordedClasses");
+					const response = await getRecordedClasses.get();
+					let aux = [];
+					response.forEach(recordedClasses => {
+						aux.push({ ...recordedClasses.data(), id: recordedClasses.id });
+					});
+					setStore({
+						recordedClasses: aux
+					});
+				} catch (e) {
+					alert(e);
+				}
+			},
+			classRegistered: (userId, index) => {
+				const regClass = getStore().classes[index];
+				const id = regClass.id;
+				let newRegister = [...regClass.registered, userId];
+				// console.log("class: ", regClass);
+				// console.log("classId: ", id);
+				// console.log("newArray: ", newRegister);
+				firebase
+					.firestore()
+					.collection("classes")
+					.doc(id)
+					.set({
+						title: regClass.title,
+						description: regClass.description,
+						image: regClass.image,
+						registered: newRegister
+					})
+					.catch(e => alert(e));
+				getActions().getClassesFB();
 			}
+
+			// classRegisterd: (id, index) => {
+			// 	setStore({ classes: [...[index].registered, id] });
+			// }
 			// getMap: () => {
 			// 	mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY2Vsb2NhbHZlcyIsImEiOiJja3M5NDJyaWcwNTZkMndwNTI5cGxoNGlwIn0.sGO0iW0yrNTyXE6jfrqyaQ';
 			// 	const map = new mapboxgl.Map({

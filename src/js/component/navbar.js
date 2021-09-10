@@ -6,8 +6,6 @@ import { singOut } from "../utilities/signOut";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	let history = useHistory();
-	console.log(localStorage.getItem("userName"));
-	console.log(localStorage.getItem("userId"));
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			{localStorage.getItem("userName") === null ? (

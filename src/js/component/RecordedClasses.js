@@ -22,7 +22,7 @@ export const RecordedClasses = () => {
 								<img
 									src={recordedClasses.image}
 									alt="Mike Anamendolla"
-									className="rounded-circle mx-auto d-block img-fluid"
+									className="mx-auto d-block img-fluid"
 								/>
 							</div>
 							<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
@@ -32,6 +32,7 @@ export const RecordedClasses = () => {
 								<br />
 								<p>Description:</p>
 								<span className="text-muted">{recordedClasses.description}</span>
+								<br />
 								<button
 									onClick={() => {
 										setState({ showModal: true });

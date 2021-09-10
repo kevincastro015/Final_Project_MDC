@@ -18,10 +18,10 @@ export const Footer = () => {
 
 				{/* <!-- Right --> */}
 				<div>
-					<a href="" className="ml-2 text-reset">
+					<a href="https://www.facebook.com/" className="ml-2 text-reset">
 						<i className="fab fa-facebook-f" />
 					</a>
-					<a href="" className="ml-2 text-reset">
+					<a href="https://www.instagram.com/" className="ml-2 text-reset">
 						<i className="fab fa-instagram" />
 					</a>
 				</div>
